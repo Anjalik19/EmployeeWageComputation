@@ -7,7 +7,7 @@ read option
 echo ""
 case $option in
 1)
-attendanceCheck(){
+AttendanceCheck(){
 echo "Attendance Check"
 echo ""
 echo "Enter the value to check Attendance"
@@ -19,10 +19,10 @@ else(( $value==0))
 echo "Employee is Absent"
 fi
 }
-attendanceCheck
+AttendanceCheck
 ;;
 2)
-fullWage()
+fullTimeWage()
 {
 echo "Daily Employee Wage"
 echo ""
@@ -33,10 +33,10 @@ day=8
 result=$((hour * day))
 echo "Daily Employee Wage = $result"
 }
-fullWage
+fullTimeWage
 ;;
 3)
-partTime()
+PartTimeWage()
 {
 echo "Part Time Wage"
 echo ""
@@ -47,6 +47,6 @@ partTime=4
 result=$((hour * partTime))
 echo "Part time Employee wage = $result"
 }
-partTime
+partTimeWage
 ;;
 esac
