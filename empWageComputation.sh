@@ -21,7 +21,7 @@ return 80
 
 attendanceCheck()
 {
-echo "Enter value to check attendance"
+echo "Enter the value to check attendance"
 read value
 if(( $value==1 ))
 then
@@ -34,7 +34,13 @@ fi
 case $option in
 1)
 attendanceCheck
-echo "Employee is $value"
+result=$?
+if(($result==1))
+then
+echo "Employee is present"
+else(($result==0))
+echo "Employee is Absent"
+fi
 ;;
 2)
 fullWage
