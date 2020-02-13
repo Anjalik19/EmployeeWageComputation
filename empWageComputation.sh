@@ -9,8 +9,6 @@ echo ""
 if(( $value==1 ))
 then
 return 1
-else(( $value==0 ))
-return 0
 echo "Employee is Absent"
 fi
 }
