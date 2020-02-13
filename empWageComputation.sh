@@ -4,7 +4,6 @@ echo "Case 2-Part Time Employee Wage"
 read option
 echo ""
 echo "Wage per hour is 20"
-
 fullWage()
     {
 	echo "Full day hour is 8"
@@ -18,7 +17,6 @@ partTime()
     }
 case $option in
 1)
-
 attendanceCheck()
     {
 	present=0
