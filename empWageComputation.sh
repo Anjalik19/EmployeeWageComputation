@@ -5,48 +5,45 @@ echo "Case 3 - Part Time Employee Wage"
 echo "Enter your option"
 read option
 echo ""
-case $option in
-1)
-AttendanceCheck(){
-echo "Attendance Check"
-echo ""
-echo "Enter the value to check Attendance"
-read value
-random=$(( RANDOM % 2 ))
-if(( $value==1));then
-echo "Employee is Present"
-else(( $value==0))
-echo "Employee is Absent"
-fi
-}
-AttendanceCheck
-;;
-2)
-fullTimeWage()
+fullWage()
 {
-echo "Daily Employee Wage"
-echo ""
 echo "Wage per hour is 20"
 echo "Full day hour is 8"
-hour=20
-day=8
-result=$((hour * day))
-echo "Daily Employee Wage = $result"
+return 160
 }
-fullTimeWage
+
+partTime()
+{
+echo "Wage per hour is 20"
+echo "Part time hour is 4"
+return 80
+}
+
+attendanceCheck()
+{
+echo "Enter value to check attendance"
+read value
+if(( $value==1 ))
+then
+return 1
+else(( $value==0 ))
+return 0
+fi
+}
+
+case $option in
+1)
+attendanceCheck
+echo "Employee is $value"
+;;
+2)
+fullWage
+output=$?
+echo "Daily Employee Wage = $output"
 ;;
 3)
-PartTimeWage()
-{
-echo "Part Time Wage"
-echo ""
-echo "Wage per hour is 20"
-echo "part time hour is 4"
-hour=20
-partTime=4
-result=$((hour * partTime))
-echo "Part time Employee wage = $result"
-}
-partTimeWage
+partTime
+output=$?
+echo "Part time Employee wage = $output"
 ;;
 esac
