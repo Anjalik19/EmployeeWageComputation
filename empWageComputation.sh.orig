@@ -1,5 +1,5 @@
 #!/bin/sh
-
+<<<<<<< HEAD
 echo "Welcome to Employee Wage Computation"
 =======
 attendanceCheck(){
@@ -13,4 +13,4 @@ echo "Employee is Absent"
 fi
 }
 attendanceCheck
-
+>>>>>>> useCase1-AttendanceCheck
