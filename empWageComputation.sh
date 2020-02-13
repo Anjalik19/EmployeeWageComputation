@@ -4,4 +4,4 @@ echo "Part time hour is 4"
 hour=20
 parttime=4
 result=$((hour * parttime))
-echo $result
+echo "Part time wage = $result"
