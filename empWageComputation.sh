@@ -1,6 +1,7 @@
 #!/bin/sh
 
 
+
 echo "Welcome to Employee Wage Computation"
 =======
 attendanceCheck(){
@@ -25,4 +26,15 @@ result=$((hour * day))
 echo "Daily Employee Wage = $result"
 }
 fullWage
+
+=======
+partTime(){
+echo "Wage per Hour is 20"
+echo "Part time hour is 4"
+hour=20
+parttime=4
+result=$((hour * parttime))
+echo "Part time wage = $result"
+}
+partTime
 
