@@ -10,7 +10,7 @@ attendanceCheck()
 	if(( $value==1 ))
 		then
 		return 1
-		echo "Employee is Absent"
+		echo "Employee is Present"
 	fi
    }
 
