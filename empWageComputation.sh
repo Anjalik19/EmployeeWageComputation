@@ -1,9 +1,5 @@
 #!/bin/sh
 
-
-
-
-
 echo "Welcome to Employee Wage Computation"
 =======
 attendanceCheck(){
@@ -47,29 +43,12 @@ echo "Case 3 - Part Time Employee Wage"
 echo "Enter your option"
 read option
 echo ""
-=======
-echo "Case 1 - Daily Employee Wage"
-echo "Case 2 - Part Time Employee Wage"
-read option
-attendanceCheck()
-   {
-	echo "Press 1 to check attendance"
-	read value
-	echo ""
-	if(( $value==1 ))
-		then
-		return 1
-		echo "Employee is Absent"
-	fi
-   }
-
 fullWage()
    {
 	echo "Wage per hour is 20"
 	echo "Full day hour is 8"
 	return 160
    }
-
 partTime()
    {
 	echo "Wage per hour is 20"
@@ -88,7 +67,6 @@ attendanceCheck()
 			return 0
 		fi
    }
-
 case $option in
 1)
 attendanceCheck
@@ -113,12 +91,34 @@ echo "Part time Employee wage = $output"
 esac
 
 =======
+echo "Case 1 - Daily Employee Wage"
+echo "Case 2 - Part Time Employee Wage"
+read option
+attendanceCheck()
+   {
+	echo "Press 1 to check attendance"
+	read value
+	echo ""
+	if(( $value==1 ))
+		then
+		return 1
+		echo "Employee is Present"
+	fi
+   }
+fullWage()
+   {
+	echo "Wage per hour is 20"
+	echo "Full day hour is 8"
+	return 160
+   }
+
 partTime()
    {
 	echo "Wage per hour is 20"
-	echo "Part time wage is 4"
+	echo "Part time hour is 4"
 	return 80
    }
+
 case $option in
 1)
 attendanceCheck
