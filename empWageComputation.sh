@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 
@@ -324,7 +325,8 @@ attendanceCheck
 esac
 
 
-======
+
+=======
 size=20
 declare -a array[$size]
 echo "Enter 1 for Full Wages"
@@ -353,8 +355,15 @@ attendanceCheck()
 			   then
 				array[$i]=160
 				present=$((present+1))
+<<<<<<< HEAD
 				   else
 					array[$i]=0
+=======
+				   echo "Day $i : Present"
+				   else
+					array[$i]=0
+				    echo "Day $i : Absent"
+>>>>>>> useCase9-DayAndDailyWages
 			 fi
 		done
    for((i=0;i<$size;i++))
@@ -381,8 +390,15 @@ attendanceCheck()
 			   then
 				array[$i]=160
 				present=$((present+1))
+<<<<<<< HEAD
 				   else
 					array[$i]=0
+=======
+                                echo "Day $i : Present"
+				   else
+					array[$i]=0
+                                        echo "Day $i : Absent"
+>>>>>>> useCase9-DayAndDailyWages
 			fi
 		done
     for((i=0;i<$size;i++))
@@ -397,4 +413,7 @@ echo "Employee total wage $(($present*result))"
 attendanceCheck
 ;;
 esac
+<<<<<<< HEAD
 
+=======
+>>>>>>> useCase9-DayAndDailyWages
