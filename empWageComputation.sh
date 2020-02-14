@@ -2,7 +2,7 @@
 attendanceCheck(){
 echo "Enter the value to check Attendance"
 read value
-random=$(( RANDOM % 2 ))
+random=$(( 1 + RANDOM % 2 ))
 if(( $random==1 ));then
 echo "Employee is Present"
 else(( $random==0 ))
