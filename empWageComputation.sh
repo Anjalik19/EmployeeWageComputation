@@ -237,7 +237,10 @@ echo ""
 	b=20
 	salary=$((workingHours*b))
 	echo "Monthly Wages = $salary"
+  	echo "Monthly Wages = $salary"
   fi
+;;
+esac
 =======
 echo "Case 1-Daily Employee Wage"
 echo "Case 2-Part Time Employee Wage"
@@ -285,7 +288,43 @@ attendanceCheck()
 	echo "Monthly Wages = $salary"
 	fi
     }
-=======
+attendanceCheck
+;;
+2)
+attendanceCheck()
+    {
+	present=0
+	echo "Enter 1 to Check Attendance"
+	read value
+	echo ""
+	for((i=1;i<20;i++))
+	do
+	random=$(( RANDOM % 2))
+	if(( $random==1 ))
+	then
+	present=$((present+1))
+	fi
+	done
+	partTime
+	result=$?
+	echo "Employee total attendance is $present"
+	echo ""
+	workingHours=$((present * 4))
+	echo "Working hours are $workingHours"
+	echo ""
+	if((workingHours<=100))
+	then
+	a=20
+	salary=$((workingHours*a))
+	echo "Monthly Wages = $salary"
+	fi
+    }
+attendanceCheck
+;;
+esac
+
+
+======
 size=20
 declare -a array[$size]
 echo "Enter 1 for Full Wages"
@@ -328,40 +367,12 @@ result=$?
 echo "Employee attandance is $present"
 echo "Employee total wage $((present*result))"
 }
->>>>>>> useCase8-StoreDailyWage
 attendanceCheck
 ;;
 2)
 attendanceCheck()
     {
 	present=0
-<<<<<<< HEAD
-	echo "Enter 1 to Check Attendance"
-	read value
-	echo ""
-	for((i=1;i<20;i++))
-	do
-	random=$(( RANDOM % 2))
-	if(( $random==1 ))
-	then
-	present=$((present+1))
-	fi
-	done
-	partTime
-	result=$?
-	echo "Employee total attendance is $present"
-	echo ""
-	workingHours=$((present * 4))
-	echo "Working hours are $workingHours"
-	echo ""
-	if((workingHours<=100))
-	then
-	a=20
-	salary=$((workingHours*a))
-	echo "Monthly Wages = $salary"
-	fi
-    }
-=======
 	echo ""
 	      for((i=0;i<$size;i++))
 		 do
@@ -383,7 +394,7 @@ partTime
 result=$?
 echo "Employee total wage $(($present*result))"
 }
->>>>>>> useCase8-StoreDailyWage
 attendanceCheck
 ;;
 esac
+
