@@ -3,6 +3,7 @@
 
 
 
+
 echo "Welcome to Employee Wage Computation"
 =======
 attendanceCheck(){
@@ -46,6 +47,22 @@ echo "Case 3 - Part Time Employee Wage"
 echo "Enter your option"
 read option
 echo ""
+=======
+echo "Case 1 - Daily Employee Wage"
+echo "Case 2 - Part Time Employee Wage"
+read option
+attendanceCheck()
+   {
+	echo "Press 1 to check attendance"
+	read value
+	echo ""
+	if(( $value==1 ))
+		then
+		return 1
+		echo "Employee is Absent"
+	fi
+   }
+
 fullWage()
    {
 	echo "Wage per hour is 20"
@@ -95,3 +112,46 @@ echo "Part time Employee wage = $output"
 ;;
 esac
 
+=======
+partTime()
+   {
+	echo "Wage per hour is 20"
+	echo "Part time wage is 4"
+	return 80
+   }
+case $option in
+1)
+attendanceCheck
+	present=0
+	for((i=1;i<=20;i++))
+	    do
+		random=$(( RANDOM % 2 ))
+		    if(( $random==1 ))
+		      then
+		 	 present=$((present+1))
+		     fi
+	    done
+fullWage
+	result=$?
+	echo "Employee Attendance is $present"
+	echo ""
+	echo "Wages for month is $((present * result))"
+;;
+2)
+attendanceCheck
+	present=0
+	     for(( i=1;i<=20;i++ ))
+		do
+		   random=$(( RANDOM % 2 ))
+			if(( $random==1 ))
+			   then
+				present=$((present+1))
+			fi
+		done
+partTime
+	result=$?
+	echo "Employee Attendance is $present"
+	echo ""
+	echo "Wage for month is $((present * result))"
+;;
+esac
