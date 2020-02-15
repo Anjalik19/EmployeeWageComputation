@@ -1,7 +1,12 @@
 #!/bin/sh
 
+echo "             ****************************************"
 
-echo "Welcome to Employee Wage Computation"
+echo "            " "* Welcome to Employee Wage Computation *"
+
+echo "             ****************************************"
+echo " "
+
 =======
 attendanceCheck(){
 echo "Enter the value to check Attendance"
