@@ -8,37 +8,40 @@ echo "             ****************************************"
 echo " "
 
 =======
-attendanceCheck(){
-echo "Enter the value to check Attendance"
-read value
-random=$(( RANDOM % 2 ))
-if(( $random==1 ));then
-echo "Employee is Present"
-else(( $random==0 ))
-echo "Employee is Absent"
-fi
+attendanceCheck()
+{
+	echo "Enter the value to check Attendance"
+	read value
+	random=$(( RANDOM % 2 ))
+	if(( $random==1 ));then
+	echo "Employee is Present"
+	else(( $random==0 ))
+	echo "Employee is Absent"
+	fi
 }
 attendanceCheck
 
 =======
-fullWage(){
-echo "Wage per Hour is 20"
-echo "Full day hour is 8"
-hour=20
-day=8
-result=$((hour * day))
-echo "Daily Employee Wage = $result"
+fullWage()
+{
+	echo "Wage per Hour is 20"
+	echo "Full day hour is 8"
+	hour=20
+	day=8
+	result=$((hour * day))
+	echo "Daily Employee Wage = $result"
 }
 fullWage
 
 =======
-partTime(){
-echo "Wage per Hour is 20"
-echo "Part time hour is 4"
-hour=20
-parttime=4
-result=$((hour * parttime))
-echo "Part time wage = $result"
+partTime()
+{
+	echo "Wage per Hour is 20"
+	echo "Part time hour is 4"
+	hour=20
+	parttime=4
+	result=$((hour * parttime))
+	echo "Part time wage = $result"
 }
 partTime
 
@@ -50,20 +53,20 @@ echo "Enter your option"
 read option
 echo ""
 fullWage()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Full day hour is 8"
 	return 160
-   }
+}
 partTime()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Part time hour is 4"
 	return 80
-   }
+}
 
 attendanceCheck()
-   {
+{
 	echo "Enter the value to check attendance"
 	read value
 		if(( $value==1 ))
@@ -72,7 +75,7 @@ attendanceCheck()
 			else(( $value==0 ))
 			return 0
 		fi
-   }
+}
 case $option in
 1)
 attendanceCheck
@@ -110,20 +113,20 @@ attendanceCheck()
 		return 1
 		echo "Employee is Present"
 	fi
-   }
+}
 fullWage()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Full day hour is 8"
 	return 160
-   }
+}
 
 partTime()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Part time hour is 4"
 	return 80
-   }
+}
 
 case $option in
 1)
@@ -168,7 +171,7 @@ echo "Case 1 - Daily Employee Wage"
 echo "Case 2 - Part Time Employee Wage"
 read option
 attendanceCheck()
-    {
+{
 	echo "Press 1 to check attendance"
 	read value
 	echo ""
@@ -177,20 +180,20 @@ attendanceCheck()
 	return 1
 	echo "Employee is Absent"
 	fi
-    }
+}
 
 fullWage()
-    {
+{
 	echo "Wage per hour is 20"
 	echo "Full day hour is 8"
 	return 8
-    }
+}
 partTime()
-    {
+{
 	echo "Wage per hour is 20"
 	echo "Part time wage is 4"
 	return 4
-    }
+}
 case $option in
 1)
 attendanceCheck
@@ -250,30 +253,30 @@ read option
 echo ""
 echo "Wage per hour is 20"
 fullWage()
-    {
+{
 	echo "Full day hour is 8"
 	return 160
-    }
+}
 
 partTime()
-    {
+{
 	echo "Part time hour is 4"
 	return 80
-    }
+}
 case $option in
 1)
 attendanceCheck()
-    {
+{
 	present=0
 	echo "Enter 1 to Check Attendance"
 	read value
 	echo ""
 	for((i=1;i<20;i++))
 	do
-	random=$(( RANDOM % 2))
+		random=$(( RANDOM % 2))
 	if(( $random==1 ))
 	then
-	present=$((present+1))
+		present=$((present+1))
 	fi
 	done
 	fullWage
@@ -289,22 +292,22 @@ attendanceCheck()
 	salary=$((workingHours*a))
 	echo "Monthly Wages = $salary"
 	fi
-    }
+}
 attendanceCheck
 ;;
 2)
 attendanceCheck()
-    {
+{
 	present=0
 	echo "Enter 1 to Check Attendance"
 	read value
 	echo ""
 	for((i=1;i<20;i++))
 	do
-	random=$(( RANDOM % 2))
+		random=$(( RANDOM % 2))
 	if(( $random==1 ))
 	then
-	present=$((present+1))
+		present=$((present+1))
 	fi
 	done
 	partTime
@@ -335,18 +338,18 @@ echo "Enter 2 for Half Wages"
 read option
 
 fullWage()
-  {
+{
     return 160
-  }
+}
 partTime()
-  {
+{
     return 80
-  }
+}
 
 case $option in
 1)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=0;i<$size;i++))
@@ -374,7 +377,7 @@ attendanceCheck
 ;;
 2)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=0;i<$size;i++))
@@ -410,18 +413,18 @@ echo "Enter 2 for Half Wages"
 read option
 
 fullWage()
-  {
+{
     return 160
-  }
+}
 partTime()
-  {
+{
     return 80
-  }
+}
 
 case $option in
 1)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=0;i<$size;i++))
@@ -451,7 +454,7 @@ attendanceCheck
 ;;
 2)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=0;i<$size;i++))
