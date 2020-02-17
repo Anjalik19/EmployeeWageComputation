@@ -1,5 +1,6 @@
 #!/bin/sh
-fullWage(){
+fullWage()
+{
 echo "Wage per Hour is 20"
 echo "Full day hour is 8"
 hour=20
