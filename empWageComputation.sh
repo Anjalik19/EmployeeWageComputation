@@ -6,21 +6,21 @@ echo "Enter your option"
 read option
 echo ""
 fullWage()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Full day hour is 8"
 	return 160
-   }
+}
 
 partTime()
-   {
+{
 	echo "Wage per hour is 20"
 	echo "Part time hour is 4"
 	return 80
-   }
+}
 
 attendanceCheck()
-   {
+{
 	echo "Enter the value to check attendance"
 	read value
 		if(( $value==1 ))
@@ -29,7 +29,7 @@ attendanceCheck()
 			else(( $value==0 ))
 			return 0
 		fi
-   }
+}
 
 case $option in
 1)
