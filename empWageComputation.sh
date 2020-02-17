@@ -240,7 +240,6 @@ echo ""
 	b=20
 	salary=$((workingHours*b))
 	echo "Monthly Wages = $salary"
-  	echo "Monthly Wages = $salary"
   fi
 ;;
 esac
@@ -383,7 +382,7 @@ attendanceCheck()
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
 			   then
-				array[$i]=160
+				array[$i]=80
 				present=$((present+1))
 				   else
 					array[$i]=0
@@ -460,7 +459,7 @@ attendanceCheck()
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
 			   then
-				array[$i]=160
+				array[$i]=80
 				present=$((present+1))
                                 echo "Day $i : Present"
 				   else
