@@ -1,7 +1,7 @@
 #!/bin/sh
 attendanceCheck()
 {
-echo "Enter the value to check Attendance"
+echo "Enter value to check Attendance"
 read value
 random=$(( RANDOM % 2 ))
 if(( $random==1 ));then
