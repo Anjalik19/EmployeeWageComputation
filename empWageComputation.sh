@@ -1,5 +1,6 @@
 #!/bin/sh
-attendanceCheck(){
+attendanceCheck()
+{
 echo "Enter the value to check Attendance"
 read value
 random=$(( RANDOM % 2 ))
