@@ -132,7 +132,7 @@ case $option in
 1)
 attendanceCheck
 	present=0
-	for((i=1;i<=20;i++))
+	for((i=1;i<=30;i++))
 	    do
 		random=$(( RANDOM % 2 ))
 		    if(( $random==1 ))
@@ -149,7 +149,7 @@ fullWage
 2)
 attendanceCheck
 	present=0
-	     for(( i=1;i<=20;i++ ))
+	     for(( i=1;i<=30;i++ ))
 		do
 		   random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
@@ -198,7 +198,7 @@ case $option in
 1)
 attendanceCheck
 present=0
-   for((i=1;i<=20;i++))
+   for((i=1;i<=30;i++))
      do
 	random=$(( RANDOM % 2 ))
 	if(( $random==1 ))
@@ -223,7 +223,7 @@ echo ""
 2)
 attendanceCheck
 present=0
-  for(( i=1;i<=20;i++ ))
+  for(( i=1;i<=30;i++ ))
      do
 	random=$(( RANDOM % 2 ))
 	    if(( $random==1 ))
@@ -271,7 +271,7 @@ attendanceCheck()
 	echo "Enter 1 to Check Attendance"
 	read value
 	echo ""
-	for((i=1;i<20;i++))
+	for((i=1;i<=30;i++))
 	do
 		random=$(( RANDOM % 2))
 	if(( $random==1 ))
@@ -302,7 +302,7 @@ attendanceCheck()
 	echo "Enter 1 to Check Attendance"
 	read value
 	echo ""
-	for((i=1;i<20;i++))
+	for((i=1;i<=30;i++))
 	do
 		random=$(( RANDOM % 2))
 	if(( $random==1 ))
@@ -331,7 +331,7 @@ esac
 
 
 =======
-size=20
+size=30
 declare -a array[$size]
 echo "Enter 1 for Full Wages"
 echo "Enter 2 for Half Wages"
@@ -352,7 +352,7 @@ attendanceCheck()
 {
 	present=0
 	echo ""
-	      for((i=0;i<$size;i++))
+	      for((i=1;i<=$size;i++))
 		 do
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
@@ -363,7 +363,7 @@ attendanceCheck()
 					array[$i]=0
 			 fi
 		done
-   for((i=0;i<$size;i++))
+   for((i=1;i<=$size;i++))
       do
 	 printf ${array[i]}" "
       done
@@ -380,7 +380,7 @@ attendanceCheck()
 {
 	present=0
 	echo ""
-	      for((i=0;i<$size;i++))
+	      for((i=1;i<=$size;i++))
 		 do
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
@@ -390,8 +390,8 @@ attendanceCheck()
 				   else
 					array[$i]=0
 			fi
-		done
-    for((i=0;i<$size;i++))
+done
+for((i=1;i<=$size;i++))
       do
 	printf ${array[i]}" "
       done
@@ -406,7 +406,7 @@ esac
 
 
 ======
-size=20
+size=30
 declare -a array[$size]
 echo "Enter 1 for Full Wages"
 echo "Enter 2 for Half Wages"
@@ -427,7 +427,7 @@ attendanceCheck()
 {
 	present=0
 	echo ""
-	      for((i=0;i<$size;i++))
+	      for((i=1;i<=$size;i++))
 		 do
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
@@ -440,7 +440,7 @@ attendanceCheck()
 				    echo "Day $i : Absent"
 			 fi
 		done
-   for((i=0;i<$size;i++))
+for((i=1;i<=$size;i++))
       do
 	 printf ${array[i]}" "
       done
@@ -457,7 +457,7 @@ attendanceCheck()
 {
 	present=0
 	echo ""
-	      for((i=0;i<$size;i++))
+	      for((i=1;i<=$size;i++))
 		 do
 		     random=$(( RANDOM % 2 ))
 			if(( $random==1 ))
@@ -470,7 +470,7 @@ attendanceCheck()
                                         echo "Day $i : Absent"
 			fi
 		done
-    for((i=0;i<$size;i++))
+    for((i=1;i<=$size;i++))
       do
 	printf ${array[i]}" "
       done
