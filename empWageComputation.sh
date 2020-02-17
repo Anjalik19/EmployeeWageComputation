@@ -6,7 +6,7 @@ attendanceCheck()
 {
 	echo "Press 1 to check attendance"
 	read value
-	echo ""
+	echo " "
 	if(( $value==1 ))
 	then
 	return 1
