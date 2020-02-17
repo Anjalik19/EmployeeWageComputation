@@ -1,5 +1,6 @@
 #!/bin/sh
-partTime(){
+partTime()
+{
 echo "Wage per Hour is 20"
 echo "Part time hour is 4"
 hour=20
