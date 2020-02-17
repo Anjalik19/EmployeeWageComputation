@@ -4,7 +4,7 @@ echo "Case 2 - Daily Employee Wage"
 echo "Case 3 - Part Time Employee Wage"
 echo "Enter your option"
 read option
-echo ""
+echo " "
 fullWage()
 {
 	echo "Wage per hour is 20"
