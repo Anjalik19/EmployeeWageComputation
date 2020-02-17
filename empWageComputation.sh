@@ -5,18 +5,18 @@ echo "Enter 2 for Half Wages"
 read option
 
 fullWage()
-  {
-    return 160
-  }
+{
+   return 160
+}
 partTime()
-  {
-    return 80
-  }
+{
+   return 80
+}
 
 case $option in
 1)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=1;i<$size;i++))
@@ -32,10 +32,10 @@ attendanceCheck()
 				    echo "Day $i : Absent"
 			 fi
 		done
-   for((i=1;i<$size;i++))
-      do
-	 printf ${array[i]}" "
-      done
+for((i=1;i<$size;i++))
+   do
+     printf ${array[i]}" "
+   done
 echo ""
 fullWage
 result=$?
@@ -46,7 +46,7 @@ attendanceCheck
 ;;
 2)
 attendanceCheck()
-    {
+{
 	present=0
 	echo ""
 	      for((i=1;i<$size;i++))
@@ -62,10 +62,10 @@ attendanceCheck()
                                         echo "Day $i : Absent"
 			fi
 		done
-    for((i=1;i<$size;i++))
-      do
+for((i=1;i<$size;i++))
+    do
 	printf ${array[i]}" "
-      done
+    done
 echo ""
 partTime
 result=$?
