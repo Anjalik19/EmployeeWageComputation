@@ -19,7 +19,7 @@ case $option in
 attendanceCheck()
 {
 	present=0
-	echo ""
+	echo " "
 	      for((i=1;i<$size;i++))
 		 do
 		     random=$(( RANDOM % 2 ))
